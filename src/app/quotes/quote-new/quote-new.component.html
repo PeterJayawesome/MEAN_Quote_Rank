@@ -1,0 +1,10 @@
+<p>
+  quote-new works!
+</p>
+
+<h2>Add a Quote</h2>
+<form (submit)="sendForm($event)" #formData="ngForm">
+	<textarea id="quote" [(ngModel)]="quote.content" name="content" required minlength="10"></textarea><br>
+	<p>Author: <input type="text" name="author" required [(ngModel)]="quote.author"></p>
+	<button type="submit" [disabled]="formData.invalid">Add Quote</button>
+</form>

@@ -1,0 +1,13 @@
+<p>
+  quote-list works!
+</p>
+<h2>Quote list</h2>
+<div class="quote" *ngFor="let quote of quotes | orderBy: -rating;let i=index">
+	<p class="content">{{quote.content}}<br>-{{quote.author}}</p>
+	<h3 class="rating">{{quote.rating}}</h3>
+	<div class="buttons">
+		<button class="up" (click)="VoteUp(i)">Vote Up</button>
+		<button class="down" (click)="VoteDown(i)">Vote Down</button>
+		<button class="delete" (click)="Delete(i)">Delete</button>
+	</div>
+</div>

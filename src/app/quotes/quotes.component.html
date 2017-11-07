@@ -1,0 +1,7 @@
+<p>
+  quotes works!
+</p>
+<app-quote-new (addQuote)="create($event)"></app-quote-new>
+<app-quote-list [quotes]="quotes" (voteUp)="voteUp($event)" (voteDown)="voteDown($event)" (delete)="delete($event)"></app-quote-list>
+
+{{quotes|json}}
